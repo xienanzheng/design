@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanzheng Xie - Applied AI Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .masthead {
+            padding-top: 10rem;
+            padding-bottom: calc(10rem - 4.5rem);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+        }
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 40px;
+            width: 2px;
+            margin-left: -1.5px;
+            background-color: #e9ecef;
+        }
+        .timeline > li {
+            position: relative;
+            margin-bottom: 50px;
+            min-height: 50px;
+        }
+        .timeline > li:before, .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+        .timeline > li:after {
+            clear: both;
+        }
+        .timeline > li .timeline-panel {
+            position: relative;
+            float: right;
+            width: calc(100% - 90px);
+            padding: 20px;
+            border: 1px solid #e9ecef;
+            border-radius: 0.25rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        .timeline > li .timeline-image {
+            position: absolute;
+            z-index: 100;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            margin-left: 0;
+            border: 7px solid #e9ecef;
+            border-radius: 100%;
+            text-align: center;
+            color: white;
+            background-color: #003262; /* Berkeley Blue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .timeline > li .timeline-image h4 {
+            font-size: 0.9rem;
+            margin-top: 0;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Nanzheng Xie</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#experience">Experience</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#education">Education</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#skills">Skills</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#projects">Projects</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <img class="profile-img mb-5" src="IMG_0021.jpg" alt="Nanzheng Xie" />
+            <h1 id="main-name" class="masthead-heading text-uppercase mb-0"></h1>
+            <div class="divider-custom divider-light"></div>
+            <p id="main-title" class="masthead-subheading font-weight-light mb-0"></p>
+        </div>
+    </header>
+    <!-- About Section-->
+    <section class="page-section" id="about">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">About Me</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p id="about-me-text" class="lead text-center"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section-->
+    <section class="page-section bg-light" id="experience">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Experience</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <ul id="experience-timeline" class="timeline"></ul>
+        </div>
+    </section>
+    <!-- Education Section-->
+    <section class="page-section" id="education">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Education</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div id="education-container" class="row justify-content-center"></div>
+        </div>
+    </section>
+    <!-- Skills Section-->
+    <section class="page-section bg-light" id="skills">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Skills</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div id="skills-container" class="row text-center"></div>
+        </div>
+    </section>
+    <!-- Projects Section-->
+    <section class="page-section" id="projects">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Projects</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div id="projects-container" class="row"></div>
+        </div>
+    </section>
+    <!-- Contact Section-->
+    <section class="page-section bg-light" id="contact">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div id="contact-container" class="col-lg-8 text-center"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="lead mb-0">Copyright &copy; Nanzheng Xie 2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        fetch('./resume_data.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('main-name').innerText = data.name;
+                document.getElementById('main-title').innerText = data.title;
+                document.title = `${data.name} - ${data.title}`;
+
+                document.getElementById('about-me-text').innerText = data.profile;
+
+                const experienceTimeline = document.getElementById('experience-timeline');
+                data.experience.forEach((job, index) => {
+                    const item = document.createElement('li');
+                    if (index % 2 !== 0) item.classList.add('timeline-inverted');
+                    item.innerHTML = `
+                        <div class="timeline-image"><h4>${job.period}</h4></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>${job.company}</h4>
+                                <h5 class="subheading">${job.title}</h5>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">${job.description}</p></div>
+                        </div>
+                    `;
+                    experienceTimeline.appendChild(item);
+                });
+
+                const educationContainer = document.getElementById('education-container');
+                data.education.forEach(edu => {
+                    const item = document.createElement('div');
+                    item.classList.add('col-md-6', 'col-lg-4', 'mb-5');
+                    item.innerHTML = `
+                        <div class="portfolio-item mx-auto">
+                            <h4 class="text-center">${edu.institution}</h4>
+                            <p class="text-center">${edu.degree} (${edu.period})</p>
+                            <p class="text-center text-muted">${edu.focus}</p>
+                        </div>
+                    `;
+                    educationContainer.appendChild(item);
+                });
+
+                const skillsContainer = document.getElementById('skills-container');
+                data.skills.forEach(skill => {
+                    const item = document.createElement('div');
+                    item.classList.add('col-md-3');
+                    item.innerHTML = `
+                        <h4 class="my-3">${skill.category}</h4>
+                        <p class="text-muted">${skill.list}</p>
+                    `;
+                    skillsContainer.appendChild(item);
+                });
+
+                const projectsContainer = document.getElementById('projects-container');
+                data.projects.forEach(project => {
+                    const item = document.createElement('div');
+                    item.classList.add('col-md-4', 'text-center');
+                    item.innerHTML = `
+                        <h4 class="my-3">${project.name}</h4>
+                        <p class="text-muted">${project.description}</p>
+                    `;
+                    projectsContainer.appendChild(item);
+                });
+
+                const contactContainer = document.getElementById('contact-container');
+                contactContainer.innerHTML = `
+                    <p class="lead">Feel free to reach out to me via email or connect with me on LinkedIn.</p>
+                    <a href="mailto:${data.contact.email}" class="btn btn-primary btn-xl">Email Me</a>
+                    <a href="${data.contact.linkedin}" class="btn btn-secondary btn-xl" target="_blank">LinkedIn</a>
+                `;
+            });
+    </script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

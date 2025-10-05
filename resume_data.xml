@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resume>
+  <name>Nanzheng Xie</name>
+  <title>Applied AI Engineer (CISSP, CRISC)</title>
+  <contact>
+    <email>xienanzheng@berkeley.edu</email>
+    <linkedin>https://linkedin.com/in/nanzheng-xie</linkedin>
+  </contact>
+  <profile>Applied Al engineer (CISSP, CRISC) with 6+ years' experience leading cross-functional teams to deliver Al- and security-driven products. I led product strategy, delivered digital-transformation outcomes, and strengthened risk-aware decision-making across internal teams and global stakeholders.</profile>
+  <experience>
+    <job>
+      <company>PUB, National Water Agency</company>
+      <title>Senior Consultant – Al &amp; Cybersecurity</title>
+      <period>2022 - 2025</period>
+      <description>Built and productionized large-scale Insider-Threat ML platform, developed a “Phishing Response Plugin”, and built an executive-facing Water Sector Readiness Dashboard. Led the design of Security Operations Centre tech stack.</description>
+    </job>
+    <job>
+      <company>Idaho National Lab</company>
+      <title>Cybersecurity Consultant</title>
+      <period>2024 - 2025</period>
+      <description>Contributed as an industry stakeholder in developing research methodologies to integrate cybersecurity into engineering practices for Critical Infrastructure. Delivered training on the CIE framework.</description>
+    </job>
+    <job>
+      <company>PUB, National Water Agency</company>
+      <title>Data Scientist</title>
+      <period>2020 - 2024</period>
+      <description>Developed In-house algorithm using RFC and Time Series Modeling in production PLCs, resulting in annual savings of $750,000 in Wastewater Critical Infrastructure.</description>
+    </job>
+    <job>
+      <company>Robert Bosch (SEA HQ)</company>
+      <title>Software Engineer</title>
+      <period>2019 - 2020</period>
+      <description>Development of intelligent cabin filter, utilizing RGB light sensors to predict filter condition (aging) using machine learning.</description>
+    </job>
+    <job>
+      <company>Nike, Ching Luh</company>
+      <title>Quantitative Risk Analyst</title>
+      <period>2019</period>
+      <description>Conducted financial risk analysis of downtime. Analyse and provided strategy guidance to reduce risk impact and asset re-balancing in two largest NIKE manufacturing plants.</description>
+    </job>
+  </experience>
+  <education>
+    <school>
+      <institution>University of California, Berkeley</institution>
+      <degree>Master of Information Management and Systems</degree>
+      <period>2027 (anticipated)</period>
+      <focus>NLP, cloud infra, MLOps, security by design</focus>
+    </school>
+    <school>
+      <institution>National University of Singapore</institution>
+      <degree>Bachelor of Industrial Engineering with honors (Distinction)</degree>
+      <period>2020</period>
+      <focus></focus>
+    </school>
+  </education>
+  <skills>
+    <skill>
+      <category>Languages</category>
+      <list>C/C++, Java, Python, R, SQL</list>
+    </skill>
+    <skill>
+      <category>Infrastructure</category>
+      <list>Kubernetes/Dockers, CI/CD, ETL, Cloud Architecture</list>
+    </skill>
+    <skill>
+      <category>Data</category>
+      <list>Spark, Hadoop, PowerBI, Sagemaker, NLP, Pytorch/TensorFlow, Kafka/PubSub, LLM Rag</list>
+    </skill>
+    <skill>
+      <category>Specialties</category>
+      <list>ML deployment, Security Engineering, Full Stack, Threat Modeling, People Management</list>
+    </skill>
+  </skills>
+  <projects>
+    <project>
+      <name>Personal Stock Dashboard</name>
+      <description>Built an interactive stock dashboard in Python (Dash/Plotly) integrating live market data.</description>
+    </project>
+    <project>
+      <name>Air Freight Optimization APP</name>
+      <description>Full-stack developer (React.js frontend, AWS API backend) for warehouse routing optimization.</description>
+    </project>
+    <project>
+      <name>International Science Festival</name>
+      <description>Represented Singapore to compete in Korea's global innovation competition.</description>
+    </project>
+  </projects>
+</resume>

@@ -1,0 +1,87 @@
+{
+  "name": "Nanzheng Xie",
+  "title": "Applied AI Engineer (CISSP, CRISC)",
+  "contact": {
+    "email": "xienanzheng@berkeley.edu",
+    "linkedin": "https://linkedin.com/in/nanzheng-xie"
+  },
+  "profile": "Applied Al engineer (CISSP, CRISC) with 6+ years' experience leading cross-functional teams to deliver Al- and security-driven products. I led product strategy, delivered digital-transformation outcomes, and strengthened risk-aware decision-making across internal teams and global stakeholders.",
+  "experience": [
+    {
+      "company": "PUB, National Water Agency",
+      "title": "Senior Consultant – Al & Cybersecurity",
+      "period": "2022 - 2025",
+      "description": "Built and productionized large-scale Insider-Threat ML platform, developed a “Phishing Response Plugin”, and built an executive-facing Water Sector Readiness Dashboard. Led the design of Security Operations Centre tech stack."
+    },
+    {
+      "company": "Idaho National Lab",
+      "title": "Cybersecurity Consultant",
+      "period": "2024 - 2025",
+      "description": "Contributed as an industry stakeholder in developing research methodologies to integrate cybersecurity into engineering practices for Critical Infrastructure. Delivered training on the CIE framework."
+    },
+    {
+      "company": "PUB, National Water Agency",
+      "title": "Data Scientist",
+      "period": "2020 - 2024",
+      "description": "Developed In-house algorithm using RFC and Time Series Modeling in production PLCs, resulting in annual savings of $750,000 in Wastewater Critical Infrastructure."
+    },
+    {
+      "company": "Robert Bosch (SEA HQ)",
+      "title": "Software Engineer",
+      "period": "2019 - 2020",
+      "description": "Development of intelligent cabin filter, utilizing RGB light sensors to predict filter condition (aging) using machine learning."
+    },
+    {
+      "company": "Nike, Ching Luh",
+      "title": "Quantitative Risk Analyst",
+      "period": "2019",
+      "description": "Conducted financial risk analysis of downtime. Analyse and provided strategy guidance to reduce risk impact and asset re-balancing in two largest NIKE manufacturing plants."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "degree": "Master of Information Management and Systems",
+      "period": "2027 (anticipated)",
+      "focus": "NLP, cloud infra, MLOps, security by design"
+    },
+    {
+      "institution": "National University of Singapore",
+      "degree": "Bachelor of Industrial Engineering with honors (Distinction)",
+      "period": "2020",
+      "focus": ""
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "list": "C/C++, Java, Python, R, SQL"
+    },
+    {
+      "category": "Infrastructure",
+      "list": "Kubernetes/Dockers, CI/CD, ETL, Cloud Architecture"
+    },
+    {
+      "category": "Data",
+      "list": "Spark, Hadoop, PowerBI, Sagemaker, NLP, Pytorch/TensorFlow, Kafka/PubSub, LLM Rag"
+    },
+    {
+      "category": "Specialties",
+      "list": "ML deployment, Security Engineering, Full Stack, Threat Modeling, People Management"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Personal Stock Dashboard",
+      "description": "Built an interactive stock dashboard in Python (Dash/Plotly) integrating live market data."
+    },
+    {
+      "name": "Air Freight Optimization APP",
+      "description": "Full-stack developer (React.js frontend, AWS API backend) for warehouse routing optimization."
+    },
+    {
+      "name": "International Science Festival",
+      "description": "Represented Singapore to compete in Korea's global innovation competition."
+    }
+  ]
+}
