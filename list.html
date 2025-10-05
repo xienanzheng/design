@@ -1,84 +1,106 @@
-<!DOCTYPE HTML>  
-<html>  
-    <header>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="table_style.css">
-        <title>My Webpage Title</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .masthead {
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+        }
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .hobby-card {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            text-align: left;
+        }
+        .hobby-card h3 {
+            margin-bottom: 0.75rem;
+            color: #003262;
+            font-size: 1.25rem;
+        }
+        .hobby-card dl {
+            margin: 0;
+        }
+        .hobby-card dt {
+            font-weight: 700;
+            margin-top: 0.5rem;
+            color: #0f4c81;
+        }
+        .hobby-card dd {
+            margin: 0;
+            color: #50505a;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">My Webpage</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./index.html">Home</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded active" aria-current="page" href="./list.html">Hobbies</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex flex-column align-items-center">
+            <h1 class="text-uppercase mb-3">Hobbies That Keep Me Inspired</h1>
+            <p class="lead">A quick snapshot of what I do for fun and how each activity keeps me balanced.</p>
+        </div>
     </header>
-    <body>  
-        <!---Navigation--->
-        <!--This section of code defines the navigation bar at the top of the page.  The classes used here are defined in the style.css file.-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <!--This code defines the "My Webpage" link in the top right corner of the navigation pane-->
-                <a class="navbar-brand" href="./index.html">My Webpage</a>
-                <!--This code defines the "List" link in the top left corner of the navigation pane-->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./list.html">List</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!--This code creates the middle section of the webpage-->
-        <header class="masthead bg-primary text-white text-center">
-            <h1>My Movies</h1>
-        </header>
-        <!--Here is where the table will be loaded in.  The actual table will be loaded in JavaScript.-->
-        <section class="mt-5 text-center">
-            <div id="showDataJSON"></div>
-        </section>
-    </body>
+
+    <main class="page-section">
+        <div class="container">
+            <section id="hobby-grid" class="hobby-grid" aria-live="polite"></section>
+        </div>
+    </main>
 
     <script>
-
-        /*
-        * RENDERING THE JSON TABLE
-        * Get JSON data from file
-        * Get headers from retrieved data
-        * Set headers for table
-        * Add data to table
-        * Add table to DOM
-        */
         fetch('./list_data.json')
             .then(response => response.json())
             .then(data => {
+                const hobbies = data.hobbies || [];
+                const grid = document.getElementById('hobby-grid');
 
-                /*
-                This section creates the base table and finds the root json node.
-                */
-                var jsonTable = document.createElement("table");
-                var tr = jsonTable.insertRow(-1);   
-                jsonTable.style.width = "75%";
-                let root;
-                for (let prop in data) {
-                    root = prop;
+                if (!hobbies.length) {
+                    grid.innerHTML = '<p class="text-center">No hobbies to show right now. Check back soon!</p>';
+                    return;
                 }
 
-                /*
-                This section selects the headers for the table
-                */
-                let headers = Object.keys(data[root][0]);
-                headers.forEach(header => {
-                    var th = document.createElement("th");      
-                    th.innerHTML = header;
-                    tr.appendChild(th);
-                })              
-                /*
-                This section adds the data into each row of the list
-                */
-                let items = Object.keys(data[root]);
-                items.forEach(item => {
-                    tr = jsonTable.insertRow(-1);
-                    for (let key in data[root][item]) {
-                       var tabCell = tr.insertCell(-1);
-                       tabCell.innerHTML = data[root][item][key];
-                    }
-                })
-                /*
-                This section adds the table to the HTML
-                */
-                var divContainer = document.getElementById("showDataJSON");
-                divContainer.innerHTML = "";
-                divContainer.appendChild(jsonTable);
+                hobbies.forEach(hobby => {
+                    const card = document.createElement('article');
+                    card.className = 'hobby-card';
+                    card.innerHTML = `
+                        <h3>${hobby.name}</h3>
+                        <dl>
+                            <dt>Why it matters</dt>
+                            <dd>${hobby.why_it_matters}</dd>
+                            <dt>Frequency</dt>
+                            <dd>${hobby.frequency}</dd>
+                            <dt>Favorite spot</dt>
+                            <dd>${hobby.favorite_spot}</dd>
+                        </dl>
+                    `;
+                    grid.appendChild(card);
+                });
+            })
+            .catch(() => {
+                const grid = document.getElementById('hobby-grid');
+                grid.innerHTML = '<p class="text-center">Sorry, something went wrong loading the hobbies.</p>';
             });
-    </script>  
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
